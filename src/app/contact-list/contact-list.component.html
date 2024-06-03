@@ -1,0 +1,11 @@
+<div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search contacts" />
+    <button (click)="searchContacts()">Search</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let contact of contacts">
+      <a [routerLink]="['/contact', contact.id]">{{ contact.name }}</a>
+    </li>
+  </ul>
+  
